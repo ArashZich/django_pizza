@@ -22,7 +22,6 @@ class Order(models.Model):
     )
 
     customer = models.ForeignKey(User, on_delete=models.CASCADE)
-
     size = models.CharField(max_length=20, choices=SIZES, default=SIZES[0][0])
     order_status = models.CharField(max_length=20, choices=ORDER_STATUS, default=ORDER_STATUS[0][0])
     quantity = models.IntegerField()
